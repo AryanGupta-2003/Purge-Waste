@@ -25,6 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('rms_app.urls')),
     path('register/', user_views.register, name='register'),
+    path('registers/', user_views.registers, name='registers'),
     path('dashboard/', user_views.dashboard, name='dashboard'),
     path('dashboard/updateprofile', user_views.update_profile, name='update-profile'),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),

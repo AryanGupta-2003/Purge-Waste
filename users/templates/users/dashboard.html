@@ -15,20 +15,29 @@
       <a  href="{% url 'update-profile' %}">Update Profile</a>
     </div>
     <br>
+    {% if not request.user.is_superuser %}
+    <div>
+      <a  href="{% url 'createinvoice' %}">Sell Waste</a>
+    </div>
+    <br>
+    {% endif %}
+
+    {% if request.user.is_superuser %}
     <div>
       <a  href="{% url 'rms-addtolist' %}">Add Item to Wastelist</a>
     </div>
     <br>
-    {% if request.user.is_superuser %}
+    
     <div>
       <a  href="{% url 'register' %}">Register New Staff</a>
     </div>
     <br>
-    {% endif %}
+    
     <div>
       <a  href="{% url 'sales' %}">Waste Sales</a>
     </div>
     <br>
+    {% endif %}
     <div style="padding-top: 80px;">
       <a  href="{% url 'logout' %}">Log Out</a>
     </div>
