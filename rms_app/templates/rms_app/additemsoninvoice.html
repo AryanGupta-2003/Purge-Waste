@@ -27,14 +27,14 @@
             <br>
         </form>
         <div class="table">
-            <table class="itemsonly" style="margin-top: 10px;">
-                <tr style="font-family: Montserrat">
-                <h2>Invoice Items</h2>
-                  <th>S.N</th>
-                  <th>Items</th>
-                  <th>Per Item Price (Rs.)</th>
-                  <th>Quantity </th>
-                  <th>Accmulated Price (Rs.) </th>
+            <table class="itemsonly" style="margin-top: 10px;margin-left:30% !important;">
+                <tr style="font-family: Montserrat;margin:30% !important;">
+                <h2 style="text-align: center;">Invoice Items</h2>
+                  <th style="margin:30% !important;">S.N</th>
+                  <th style="margin:30% !important;">Items</th>
+                  <th style="margin:30% !important;">Per Item Price (Rs.)</th>
+                  <th style="margin:30% !important;">Quantity </th>
+                  <th style="margin:30% !important;">Accmulated Price (Rs.) </th>
                 </tr>
                 {% for itrr in invoice_obj.invoiceitem.all %}
                 <tr style="font-family: var(--text-font);">
@@ -58,14 +58,15 @@
     <br>
     <p>Date and Time: {{ invoice_obj.date_created }}</p>
     <p>Issued by: {{ invoice_obj.created_by }}</p>
+    <div>
+        <a  href="{% url 'invoice_print' invoice_obj.invoice_number %}" style="text-align: center;font-size: 20px;"> Print</a>
+    </div>
     <hr>
     <div id="horizontalbuttons">
         <div>
             <a href="{% url 'dashboard' %}"> Return to Dashboard</a>
         </div>
-        <div>
-            <a  href="{% url 'invoice_print' invoice_obj.invoice_number %}"> Print</a>
-        </div>
+        
     </div>
     {% else %}
     <h2>Opps! No invoices in Database.😫</h2>

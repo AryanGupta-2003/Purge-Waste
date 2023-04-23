@@ -134,9 +134,15 @@ button {
   letter-spacing: 0.05em;
 }
 .submits {
-  width: 100%;
+  width: 20%;
   display: inline-block;
   float: center;
+  margin-left:  40% !important;
+  margin-right: 40% !important;
+}
+.signup-text{
+  margin-right: 40% !important;
+  margin-left: 40% !important;
 }
 
 
@@ -146,6 +152,8 @@ button {
 
 .sign-up {
   background: #b8f2e6;
+  height: 40px;
+  padding: 1%;
 }
 
 button:hover {
@@ -164,3 +172,72 @@ button:hover {
     transform: translateY(5px);
   }
 }
+
+
+.rounded-circle{
+  height:180px ;
+  width: 180px;
+  border-radius: 50%;
+}
+
+
+.content-section-dashboard{
+  margin-left: 45%;
+  margin-right: 45%;
+  margin-top: 5%;
+}
+.dashboard-option-box{
+  text-align: center;
+}
+.content-section-updateprofile{
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 5%; 
+}
+.rounded-circle-update{
+  margin-left: 40%;
+  margin-right: 40%;
+  height:180px ;
+  width: 180px;
+  border-radius: 50%;
+}
+
+.form_login{
+  margin-top: 10% !important;
+}
+
+.register_login{
+  margin-top: 5% !important;
+}
+
+.form_addtolist{
+  margin-top: 7% !important;
+
+}
+
+.chippi-add-perkg{
+position: absolute !important;
+top:360px !important;
+left:680px !important;
+z-index: 10;
+background: #e2fbf5;
+}
+.chippi-add-waste{
+  position: absolute !important;
+  top:275px !important;
+
+  left:680px !important;
+z-index: 10;
+background: #e2fbf5;
+
+}
+.chippi-add-wimg{
+  position: absolute !important;
+  top:445px !important;
+
+  left:680px !important;
+z-index: 10;
+background: #e2fbf5;
+}
+
+

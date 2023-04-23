@@ -2,8 +2,10 @@
 {% block content %} 
 {% load static %}
 {% load crispy_forms_tags %}
+<link rel="stylesheet" href="{% static './static/login.css' %}">
+
 <div class="content-section">
-    <form method="POST" enctype="multipart/form-data">
+    <form method="POST" enctype="multipart/form-data" class="form_addtolist">
         {% csrf_token %}
         <fieldset style="padding-top:20px;" >
             <legend class="border-bottom mb-4">Add Waste Item to Kart</legend>
@@ -18,5 +20,10 @@
         <a  href="{% url 'dashboard' %}"> Return to Dashboard</a>
         </div>
     </form>
+    <div class="chippi-add-waste">Waste item*</div>
+    <div class="chippi-add-perkg">Price per kg*</div>
+    <div class="chippi-add-wimg">Waste image</div>
+
 </div>
+
 {% endblock content %}

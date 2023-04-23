@@ -6,7 +6,7 @@
     <form method="POST" enctype="multipart/form-data" style="margin-bottom: 24px;">
         {% csrf_token %}
         <fieldset style="padding-top:20px;">
-            <legend class="border-bottom mb-4">Create Invoice</legend>
+            <legend class="border-bottom mb-4" >Create Invoice</legend>
             {{ form|crispy }}
         </fieldset>
         <br>

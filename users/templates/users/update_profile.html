@@ -1,10 +1,10 @@
 {% extends "rms_app/base.html" %}
 {% load crispy_forms_tags %}
 {% block content%}
-<div class="content-section">
+<div class="content-section-updateprofile">
   <div class="media">
-    <img class=" rounded-circle account-img" src="{{ user.profile.image.url }}">
-    <h4 style='color: var(--green-color);'>Edit Profile</h4>
+    <img class=" rounded-circle-update account-img" src="{{ user.profile.image.url }}">
+    <h4 style='color: var(--green-color);text-align: center;'>Edit Profile</h4>
   </div>
   <hr>
   <form method="POST" enctype="multipart/form-data">
@@ -16,7 +16,7 @@
       <br>
       <br>
       <div class="form-group">
-        <button type="submit">Update Profile</button>
+        <button type="submit" style="margin-left: 20%;margin-right: 20%;">Update Profile</button>
       </div>
       <br>
     </fieldset>
