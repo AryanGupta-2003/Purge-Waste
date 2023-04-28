@@ -42,7 +42,7 @@
     {% endif %}
 </head>
 <body>
-    <nav>
+    <!-- <nav>
         <div id="navbar">
             <a href="{% url 'rms-home' %}" class='navbar-header ' style='color:var(--green-color)'>Purge Waste</a>
             <div class="navbar-links">
@@ -56,8 +56,8 @@
                 {% endif%}
             </div>
         </div>
-    </nav>
-    <nav class="navbar fixed-top bg-slate-900">
+    </nav> -->
+    <nav class="navbar  bg-slate-900">
       <div class="container sm:px-4 lg:px-8 flex flex-wrap items-center justify-between lg:flex-nowrap">
           
        
@@ -72,29 +72,29 @@
           <div class="navbar-collapse offcanvas-collapse lg:flex lg:flex-grow lg:items-center" id="navbarsExampleDefault">
               <ul class=" mt-3 mb-2 ml-auto flex flex-col list-none lg:mt-0 lg:mb-0 lg:flex-row gap-12">
                   <li>
-                      <a class="nav-link page-scroll" href="{% url 'rms-home' %}">Home <span class="sr-only">(current)</span></a>
+                      <a class="nav-link page-scroll" style="color:white;" href="{% url 'rms-home' %}">Home <span class="sr-only">(current)</span></a>
                   </li>
                   <li>
-                      <a class="nav-link page-scroll" href="#aboutUs">About Us</a>
+                      <a class="nav-link page-scroll" style="color:white;" href="#aboutUs">About Us</a>
                   </li>
           
                   <li>
-                      <a class="nav-link page-scroll" href="{% url 'rms-foodlist' %}">Pricing</a>
+                      <a class="nav-link page-scroll" style="color:white;" href="{% url 'rms-foodlist' %}">Pricing</a>
                   </li>
 
                   <li>
-                    <a class="nav-link page-scroll" href="{% url 'rms-food' %}">Waste</a>
+                    <a class="nav-link page-scroll" style="color:white;" href="{% url 'rms-food' %}">Waste</a>
                 </li>
 
                   <li>
-                      <a class="nav-link page-scroll" href="#team">Our Team</a>
+                      <a class="nav-link page-scroll" style="color:white;" href="#team">Our Team</a>
                   </li>
                   {% if user.is_authenticated %}
                   <li>
-                    <a class="navbar-link" href="{% url 'createinvoice' %}" >Create Invoice</a>
+                    <a class="navbar-link " style="position:absolute; color:white; top:53px;" href="{% url 'createinvoice' %}" >Create Invoice</a>
                   </li>
                   <li>
-                <a class="navbar-link" href="{% url 'dashboard' %}" >Dashboard</a>
+                <a class="navbar-link " style="position:absolute; color:white; top:53px;right: 200px;" href="{% url 'dashboard' %}" >Dashboard</a>
                   </li>
                   {% endif %}
               </ul>

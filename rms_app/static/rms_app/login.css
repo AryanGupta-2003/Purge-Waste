@@ -184,7 +184,7 @@ button:hover {
 .content-section-dashboard{
   margin-left: 45%;
   margin-right: 45%;
-  margin-top: 5%;
+  margin-top: 10% ;
 }
 .dashboard-option-box{
   text-align: center;
@@ -217,14 +217,14 @@ button:hover {
 
 .chippi-add-perkg{
 position: absolute !important;
-top:360px !important;
+top:400px !important;
 left:680px !important;
 z-index: 10;
 background: #e2fbf5;
 }
 .chippi-add-waste{
   position: absolute !important;
-  top:275px !important;
+  top:320px !important;
 
   left:680px !important;
 z-index: 10;
@@ -233,11 +233,9 @@ background: #e2fbf5;
 }
 .chippi-add-wimg{
   position: absolute !important;
-  top:445px !important;
+  top:485px !important;
 
   left:680px !important;
 z-index: 10;
 background: #e2fbf5;
 }
-
-
