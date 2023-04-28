@@ -3,13 +3,13 @@
 {% block content%}
 <div class="content-section-dashboard">
   <div class="media">
-    <img class=" rounded-circle account-img" src="{{ user.profile.image.url }}">
+    <img class=" rounded-circle account-img" style="border: 3px purple solid;" src="{{ user.profile.image.url }}">
     <div class="media-body">
-      <h2 class="account-heading" style="font-family: var(--head-font); color: var(--green-color);text-align: center;">{{ user.username }}</h2>
-      <p class="text-secondary">{{ user.email }}</p>
+      <h2 class="account-heading" style="font-family: var(--head-font); color: var(--green-color);text-align: center;margin-top: 20px;">{{ user.username }}</h2>
+      <p class="text-secondary" style="margin-top: 10px;">{{ user.email }}</p>
     </div>
   </div>
-  <div class="dashboard-option-box">
+  <div class="dashboard-option-box" style="border: 3px purple solid ;padding-left: 40px;padding-right: 40px;padding-bottom: 20px;border-radius: 40px;background-color: rgba(239, 199, 239, 0.397);margin-top: 20px;">
     <br>
     <div>
       <a  href="{% url 'update-profile' %}">Update Profile</a>
@@ -38,8 +38,8 @@
     </div>
     <br>
     {% endif %}
-    <div style="padding-top: 80px;">
-      <a  href="{% url 'logout' %}">Log Out</a>
+    <div  class="logss" style="background-color: rgba(183, 225, 244, 0.846);padding-left:20px;padding-right:20px;padding-top:7px;padding-bottom:7px;border-radius: 40px;">
+      <a  href="{% url 'logout' %}"  >Log Out</a>
     </div>
   </div>
 </div>

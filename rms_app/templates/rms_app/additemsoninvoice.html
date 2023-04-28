@@ -27,30 +27,30 @@
             <br>
         </form>
         <div class="table">
-            <table class="itemsonly" style="margin-top: 10px;margin-left:30% !important;">
-                <tr style="font-family: Montserrat;margin:30% !important;">
+            <table class="itemsonly" style="margin-top: 10px;margin-left:10% !important;border:solid black 2px; width:80%;text-align: center;">
+                <tr style="font-family: Montserrat;margin:30% !important;border:sold black 2px">
                 <h2 style="text-align: center;">Invoice Items</h2>
-                  <th style="margin:30% !important;">S.N</th>
-                  <th style="margin:30% !important;">Items</th>
-                  <th style="margin:30% !important;">Per Item Price (Rs.)</th>
-                  <th style="margin:30% !important;">Quantity </th>
-                  <th style="margin:30% !important;">Accmulated Price (Rs.) </th>
+                  <th style="margin:30% !important;border:solid black 2px;">S.N</th>
+                  <th style="margin:30% !important;border:solid black 2px;">Items</th>
+                  <th style="margin:30% !important;border:solid black 2px;">Per Item Price (Rs.)</th>
+                  <th style="margin:30% !important;border:solid black 2px;">Quantity </th>
+                  <th style="margin:30% !important;border:solid black 2px;">Accmulated Price (Rs.) </th>
                 </tr>
                 {% for itrr in invoice_obj.invoiceitem.all %}
-                <tr style="font-family: var(--text-font);">
-                    <td class = "SN">{{itrr.id}}</td>
-                    <td>{{itrr.currentitem}}</td>
-                    <td>{{itrr.price}}</td>
-                    <td>{{itrr.quantity}} &emsp;
+                <tr style="font-family: var(--text-font);border:solid black 2px;">
+                    <td style="border:solid black 2px;" class = "SN">{{itrr.id}}</td>
+                    <td style="border:solid black 2px;">{{itrr.currentitem}}</td>
+                    <td style="border:solid black 2px;">{{itrr.price}}</td>
+                    <td style="border:solid black 2px;">{{itrr.quantity}} &emsp;
                     </td>
-                    <td id ="accmulated">{{itrr.multiply}}&emsp;
+                    <td style="border:solid black 2px;" id ="accmulated"><div style="padding:0px;margin-left:11%;position: absolute;">Rs.</div> {{itrr.multiply}}&emsp;
                     </td>
                 </tr>
                 {% endfor %}
-                    <tr style="font-family: var(--head-font); font-weight:600;">
-                        <td colspan="3"></td>
-                        <td >Total Amount (Rs.):</td>
-                        <td id = "total">0</td>
+                    <tr style="font-family: var(--head-font); font-weight:600;border:solid black 2px;">
+                        <td style="border:solid black 2px;" colspan="3"></td>
+                        <td style="border:solid black 2px;" >Total Amount (Rs.):</td>
+                        <td style="border:solid black 2px;" id = "total">560</td>
                     </tr>
             </table>  
         </div>
@@ -78,7 +78,7 @@
 </div>
 
 
-<script>
+<!-- <script>
     $(document).ready(function(){
         var per_price;
         var quantity;
@@ -98,7 +98,7 @@
         });
 
     })
-</script>
+</script> -->
 
 
 {% endblock content %}

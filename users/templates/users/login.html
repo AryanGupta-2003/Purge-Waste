@@ -26,12 +26,11 @@
       {% csrf_token %}
       <div class="con">
         <header class="head-form">
-          <h2 class="login-header">Log In</h2>
+          <h2 class="login-header" style="text-align: center;">Log In</h2>
       
-          <p class="bakchodi">login here using your username and password</p>
         </header>
         <br>
-        <div class="field-set">
+        <div class="field-set" style="margin-left:10%">
           {{ form|crispy }} 
           <!-- <span class="input-item">
             <i class="fa fa-user-circle"></i>
@@ -63,10 +62,11 @@
         </div>
       </div>
     </form>
-    <a class="submits sign-up" href="{% url 'registers' %}"><div class="signup-text">Sign Up</div>
+    <a class="submits sign-up" href="{% url 'registers' %}" style="margin-bottom: 20px ;"><div class="signup-text" style="padding-bottom: 10px ;">Sign Up</div>
            
       <i class="fa fa-user-plus" aria-hidden="true"></i>
-    </a>    
+      <br>
+    </a>
   </div>
 </div>
  {% endblock content %}

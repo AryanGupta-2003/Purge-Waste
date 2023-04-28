@@ -4,28 +4,30 @@
 <div class='foodtable'>
   <section id="food-section">
     {% if food_obj %}
-    <h1 class="avail">Available Waste</h1>
+    <h1 class="avail" style="text-align:center;margin-top: 2%;">Available Waste</h1>
     <br>
     {% if user.is_authenticated %}
-    <div>
-      <a  href="{% url 'rms-addtolist' %}">Add Item to Kart</a>
+    <div style="text-align:center">
+      <a  href="{% url 'rms-addtolist' %}" >Add Item to Kart</a>
     </div>
     {% endif %}
     <div class="table">
-      <table style="font-size:1.05rem;">
-        <tr style="font-family: Montserrat">
-          <th>S.N</th>
-          <th>Waste Items</th>
-          <th>Per Price </th>
+      <table style="font-size:1.05rem ; border: solid black 3px;margin-left: 20%;width:60%;border-radius: 10px;" >
+        <tr style="font-family: Montserrat; border: solid black 3px;">
+          <th style="border: solid black 3px;text-align: center;">S.N</th>
+          <th style="border: solid black 3px;text-align: center;">Waste Items</th>
+          <th style="border: solid black 3px;text-align: center;">Per Price </th>
         </tr>
         {% for food_item in food_obj  %}
-        <tr>
-          <td>{{ food_item.id}}</td>
-          <td>{{ food_item.food_item}}</td>
-          <td>Rs.{{ food_item.per_price}}/-&emsp;
+        <tr style="border: solid black 3px;">
+          <td style="border: solid black 3px; text-align: center;">{{ food_item.id}}</td>
+          <td style="border: solid black 3px; text-align: center;">{{ food_item.food_item}}</td>
+          <td style="border: solid black 3px; text-align: center;">Rs.{{ food_item.per_price}}/-&emsp;
             {% if user.is_authenticated %}
-            <a href="{% url 'rms-updatetolist' food_item.id %} "> Edit</a>&ensp;
-            <a style="color: #d0333c;" href="{% url 'food_confirm_delete' food_item.id %} "> Delete</a>
+            <div style="float: right;margin-right: 5%;">
+            <a href="{% url 'rms-updatetolist' food_item.id %} " > Edit</a>&ensp;
+            <a style="color: #d0333c;" href="{% url 'food_confirm_delete' food_item.id %} " > Delete</a>
+          </div>
             {% endif %}
           </td>
         </tr>
